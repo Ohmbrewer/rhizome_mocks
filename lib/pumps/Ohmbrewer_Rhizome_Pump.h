@@ -110,6 +110,12 @@ class Ohmbrewer_Pump {
      */
     void checkForQuittingTime();
 
+    /**
+     * Quickly indicates whether the pump is ON or OFF.
+     * @returns boolean True if the pump is ON, False if the pump is OFF, NULL otherwise.
+     */
+    bool isRelayOn();
+
     //** Handlers **//
     
     /*

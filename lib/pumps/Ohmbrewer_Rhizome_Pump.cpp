@@ -217,6 +217,21 @@ void Ohmbrewer_Pump::checkForQuittingTime() {
     }
 }
 
+
+/**
+ * Quickly indicates whether the pump is ON or OFF.
+ * @returns boolean True if the pump is ON, False if the pump is OFF, NULL otherwise.
+ */
+bool Ohmbrewer_Pump::isRelayOn() {
+    if(this->state.equalsIgnoreCase("off")) {
+        return false;
+    } else if(this->state.equalsIgnoreCase("on")) {
+        return true;
+    }
+    
+    return NULL;
+}
+
 //** Handlers **//
 
 /*
